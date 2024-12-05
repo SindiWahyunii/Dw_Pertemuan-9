@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN jQuery</title>
+</head>
+<body>
+
+    <button id="viewTEXT">Tampilkan Text</button>
+    <button id="hideTEXT">Sembunyikan Text</button>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis illum dicta nemo architecto iste. Rem in dolore hic nesciunt quod quos quo eum doloribus, illo suscipit excepturi mollitia reprehenderit repudiandae. Provident pariatur asperiores cupiditate esse sunt necessitatibus nesciunt sapiente alias iusto autem dicta aut quam, ea, aspernatur vitae, similique vero! Ut quos voluptatibus voluptas! Nostrum sunt libero nemo minima, eveniet odio soluta asperiores quaerat, quam odit aliquid fugit corporis deserunt architecto nam id sit error. Eum dolorem cupiditate ipsa debitis pariatur aspernatur cumque illum, mollitia et accusantium. Quae doloremque amet inventore obcaecati reprehenderit, vel facere repudiandae, qui distinctio nemo aut maxime neque quidem animi voluptatum veniam nisi nobis incidunt expedita hic ab. Eveniet dignissimos eligendi corrupti magnam odio quos voluptatibus! Inventore, ut fugiat, amet animi vitae officiis quibusdam incidunt rerum necessitatibus dolores modi quae doloribus nulla reprehenderit! Eligendi mollitia, sed, hic veritatis possimus fuga, beatae accusantium quisquam facilis quaerat at! Quis itaque incidunt atque illo quibusdam? Sapiente magni quisquam blanditiis quis, alias, fuga asperiores repudiandae corporis ipsam accusantium natus repellat dignissimos quas in est nemo autem maiores expedita veniam animi tempora. Unde consequuntur excepturi, maiores itaque aperiam debitis quibusdam sequi, sint nemo temporibus et esse facere odio? Debitis, vitae ad. Ex nam, nihil quam placeat sapiente quaerat itaque eveniet excepturi. Sint accusantium suscipit placeat error laborum eius debitis, saepe rem natus nostrum animi cum esse temporibus eligendi odio harum ipsum dolorum! Amet odit veritatis laudantium mollitia, quisquam odio culpa ipsam eligendi! Neque, ea id aspernatur sapiente mollitia animi commodi nulla excepturi laborum veritatis qui ipsa, voluptatum repellendus debitis obcaecati quod? Quos perferendis aliquam, voluptas eius illum aperiam doloribus, adipisci, obcaecati earum culpa magni dolores quaerat quas explicabo odit officia dolorem! Laborum sapiente impedit quia, aliquam ratione repellat eius quam nulla a perspiciatis nisi possimus autem rem minima molestias doloribus temporibus.</p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("p").hide()
+            $("#hideTEXT").hide()
+            $("#viewTEXT").on("click",function(){
+                $("p").show(500)
+                $(this).hide()
+                $("#hideTEXT").show()
+            })
+        })
+        
+        $(function(){
+            $("#hideTEXT").on("click",function(){
+                $("p").hide(500)
+                $(this).hide()
+                $("#viewTEXT").show()
+            })
+        })
+        
+    </script>
+</body>
+</html>
